@@ -23,7 +23,7 @@ public class Player : MonoBehaviour
             _earnedCoins.Add(other.gameObject);
             other.gameObject.SetActive(false);
         }
-        else if (other.gameObject.tag.Equals("Hazard"))
+        else if (other.gameObject.tag.Equals("Hazard") || other.gameObject.tag.Equals("FallDeath"))
         {
             _ccontroller.enabled = false;
             _waitingToRespawn = true;
